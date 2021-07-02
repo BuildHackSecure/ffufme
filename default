@@ -26,3 +26,4 @@ server {
         return 200 "Subdomain Found";
     }
 }
+
