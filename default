@@ -1,0 +1,28 @@
+limit_req_zone $binary_remote_addr zone=mylimit:10m rate=50r/s;
+
+server {
+        listen 80 default_server;
+        root /var/www/public;
+        index index.php;
+        server_name _;
+        location / {
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+        location /cd/rate {
+                limit_req zone=mylimit burst=70 nodelay;
+                limit_req_status 429;
+                try_files $uri $uri/ /index.php?$query_string;
+        }
+        location ~ \.php$ {
+               include snippets/fastcgi-php.conf;
+               fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        }
+}
+
+server {
+    listen 80;
+    server_name redhat.ffuf.me;
+    location / {
+        return 200 "Subdomain Found";
+    }
+}
