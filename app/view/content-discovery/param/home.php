@@ -10,7 +10,7 @@
             'cmd'       :   'ffuf -w ~/wordlists/parameters.txt -u http://' + getHost() + '/cd/param/data?FUZZ=1'
         });
     </script>
-    <p>The above command should of returned the missing parameter of debug.</p>
+    <p>The above command should of returned the missing parameter of <strong>debug</strong>.</p>
     <div class="nav">
         <a class="prev" href="/cd/no404">Back : No 404 Status</a>
         <a class="next" href="/cd/rate">Next : Rate Limited</a>

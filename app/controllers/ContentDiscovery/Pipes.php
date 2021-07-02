@@ -25,7 +25,7 @@ class Pipes
 
     public static function user2(){
         if( isset($_GET["id"]) ){
-            if( $_GET["id"] === 'ODg4Cg==' ){
+            if( $_GET["id"] === 'ODg4Cg==' || $_GET["id"] === 'ODg4' ){
                 echo "User ID Found";
                 exit();
             }

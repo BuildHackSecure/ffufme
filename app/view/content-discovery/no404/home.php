@@ -17,10 +17,10 @@
         new MockTerminal({
             'element'   :   document.getElementById('terminal_2'),
             'server'    :   'root@ffuf',
-            'cmd'       :   'ffuf -w ~/wordlists/common.txt -u http://' + getHost() + '/cd/no404/FUZZ -fs 630'
+            'cmd'       :   'ffuf -w ~/wordlists/common.txt -u http://' + getHost() + '/cd/no404/FUZZ -fs <?php echo $data["size"]; ?>'
         });
     </script>
-    <p>This should cut the results down to just one file <strong>/secret</strong></p>
+    <p>This should cut the results down to just one file <strong>secret</strong></p>
 
     <div class="nav">
         <a class="prev" href="/cd/ext">Back : File Extensions</a>
