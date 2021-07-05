@@ -4,6 +4,12 @@
     <div class="welcome text-center" style="margin-top:20px;background-color: #e76c6c">
         <p>Before you start make sure you download the required <a href="/wordlists">wordlists</a> first</p>
     </div>
+
+    <h3>Installation Instructions</h3>
+    <ul>
+        <li><a href="/install">How To Install</a></li>
+    </ul>
+
     <h3>Content Discovery</h3>
     <ul>
         <li><a href="/cd/basic">Basic Content Discovery</a></li>
