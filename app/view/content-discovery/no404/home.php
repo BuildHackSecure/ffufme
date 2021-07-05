@@ -11,7 +11,7 @@
         });
     </script>
     <p>From the ffuf response you'll notice that every file you've requested has come back as been found! It's not that you've got lucky and come across a load of content it's that the webpage displaying the "Page Cannot Be Found" message is not returning a 404 header</p>
-    <p>You'll notice that the "Page Cannot Be Found" page consistently has a file size of 630 bytes. Let's re-run the ffuf command but with the -fs switch which filters out any results that are 630 bytes in length.</p>
+    <p>You'll notice that the "Page Cannot Be Found" page consistently has a file size of <?php echo $data["size"]; ?> bytes. Let's re-run the ffuf command but with the -fs switch which filters out any results that are <?php echo $data["size"]; ?> bytes in length.</p>
     <div id="terminal_2"></div>
     <script>
         new MockTerminal({
