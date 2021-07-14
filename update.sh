@@ -1,6 +1,7 @@
 #!/bin/bash
 #This script is just to support the http://ffuf.me infra and isn't required for any personal usage
 
+
 ip=$(ifconfig eth1 | grep 'inet ' | cut -d' ' -f10)
 current_git=$(git rev-parse HEAD)
 git pull
