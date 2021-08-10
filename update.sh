@@ -9,6 +9,6 @@ now_git=$(git rev-parse HEAD)
 if [[ "$current_git" != "$now_git" ]]; then
     docker build -t ffufme .
     sleep $(shuf -i 10-30 -n 1)
-    docker kill $(docker ps --filter ancestor=ffufme -q)
-    docker run -d --restart unless-stopped -p $ip:10000:80 ffufme
+    docker kill $(docker ps | grep ':10000->80' | cut -d' ' -f1)
+    docker run -d --restart unless-stopped -p "$ip":10000:80 ffufme
 fi
