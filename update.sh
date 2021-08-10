@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/usr/bin:/usr/sbin:/bin
 #This script is just to support the http://ffuf.me infra and isn't required for any personal usage
 
 
