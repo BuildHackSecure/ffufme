@@ -5,7 +5,8 @@ PATH=/usr/bin:/usr/sbin:/bin
 
 
 
-ip=$(ifconfig eth1 | grep 'inet ' | cut -d' ' -f10)
+ip="$(ifconfig eth1 | grep 'inet ' | cut -d' ' -f10)"
+cd /root/ffufme
 current_git=$(git rev-parse HEAD)
 git pull
 now_git=$(git rev-parse HEAD)
