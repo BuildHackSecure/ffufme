@@ -10,5 +10,5 @@ if [[ "$current_git" != "$now_git" ]]; then
     docker build -t ffufme .
     sleep $(shuf -i 10-30 -n 1)
     docker kill $(docker ps --filter ancestor=ffufme -q)
-    docker run -d -p $ip:10000:80 ffufme
+    docker run -d --restart unless-stopped -p $ip:10000:80 ffufme
 fi
